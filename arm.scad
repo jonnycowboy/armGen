@@ -31,7 +31,7 @@ difference()
 {
 	union()
 	{
-	rotate([90,0,90]) cylinder(h = L, r1 = h, r2 = h, center = false, $fn = 6);
+	rotate([90,0,90]) cylinder(h = L, r1 = w/2, r2 = w/2, center = false, $fn = 6);
 	cylinder (h = 10, r=r1, center = true, $fn=100);
 	translate([L,0,0]) cylinder (h = 10, r=r2, center = true, $fn=100);
 	}
@@ -55,8 +55,8 @@ difference()
 {
 	union()
 	{
-	rotate([90,0,90]) cylinder(h = L1, r1 = h, r2 = h, center = false, $fn = 6);
-	translate([L1,0,0]) rotate([90,0,90]) cylinder(h = L2, r1 = h, r2 = h, center = false, $fn = 6);
+	rotate([90,0,90]) cylinder(h = L1, r1 = w1/2, r2 = w1/2, center = false, $fn = 6);
+	translate([L1,0,0]) rotate([90,0,90]) cylinder(h = L2, r1 = w2/2, r2 = w2/2, center = false, $fn = 6);
 	cylinder (h = 10, r=r1, center = true, $fn=100);
 	translate([L1,0,0]) cylinder (h = 10, r=r2, center = true, $fn=100);
 	translate([L2+L1,0,0]) cylinder (h = 10, r=r3, center = true, $fn=100);
@@ -72,4 +72,4 @@ difference()
 
 //projection(cut=false) barSmooth2Point(100,5,8,2,3);
 //projection(cut=false) barRadius2Point(100,10,5,8,2,3);
-projection(cut=false) barRadius3Point(100,10,50,10,5,8,10,2,3,4);
+projection(cut=false) barRadius3Point(100,10,50,16,5,8,10,2,3,4);
